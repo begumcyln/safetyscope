@@ -1,0 +1,12 @@
+text_id,method,error,item
+T2a7ee8fc,model,false positive,corticosteroid
+T2b1aaf51,model,false positive,corticosteroid
+T326f4347,model,false positive,corticosteroid
+T36be8698,model,missed,Lead
+T3e9dd608,model,false positive,nitrosamine
+T533b1818,model,false positive,corticosteroid
+Tc26ace82,model,false positive,corticosteroid
+Tcd75fefc,model,false positive,corticosteroid
+Td325b049,model,false positive,corticosteroid
+Td516b0bd,model,false positive,corticosteroid
+Te4fa5d51,model,false positive,2-(4-tert-buylbenzyl) propionaldehe

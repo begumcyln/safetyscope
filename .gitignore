@@ -7,3 +7,4 @@ __pycache__/
 # Raw XML cache from the official API (re-downloadable; large)
 data/external/weekly_reports/*.xml
 logs/
+.cache/
