@@ -23,7 +23,7 @@
 | D19 | 2026-11-27 | Streamlit pages as separate view files sharing filters via `session_state` | Makes every page testable with `AppTest` | Single-file app |
 | D20 | 2026-11-27 | Power BI: browser route (Excel upload + web modeling) as primary on macOS; hand-authored PBIP as untested fallback, schema-validated | Power BI Desktop is Windows-only | Claiming a working PBIP |
 | D21 | 2026-11-27 | API updates go to `data/incoming/` in export layout; default start = export download date | Keeps the analysed scope unchanged unless new reports appear; one pipeline for both sources | Merge directly into processed data |
-| D22 | 2026-11-27 | Git identity set to a local placeholder (`owner@example.invalid`) | No identity was configured; avoid publishing a personal e-mail | Use the account e-mail |
+| D22 | 2026-11-27 | Commits authored with the owner's GitHub noreply address (after an interim placeholder) | Attributes the work on GitHub without publishing a personal e-mail | Use the account e-mail |
 | D23 | 2026-11-27 | MIT licence for code, separate `DATA_LICENSE.md` for data | Code and data have different owners and terms | Single licence |
 | D24 | 2026-11-27 | Validate the PBIP on a separate Windows computer using a minimal ZIP (project + CSVs, fixed default `DataFolder` path) instead of transferring the repository | Power BI Desktop is Windows-only; Power Query cannot use paths relative to the project file | Browser-only route; transferring the whole repository |
 | D25 | 2026-11-27 | Commit the Desktop-saved `SafetyScope.pbix` unchanged (byte-identical to the tested file) | Recruiters can open the report without rebuilding it; editing a tested binary would invalidate the test | Publish only the PBIP source |
