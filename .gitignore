@@ -11,3 +11,6 @@ logs/
 
 # Local tool settings
 .claude/
+
+# Build outputs (Power BI ZIP package)
+dist/
