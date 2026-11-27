@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+.streamlit/secrets.toml
+# Raw XML cache from the official API (re-downloadable; large)
+data/external/weekly_reports/*.xml
+logs/

@@ -1,0 +1,4 @@
+"candidate filter rule (cosmetics, official XML)",alerts,also_in_export,in_xml_not_export,in_export_not_matched
+Weekly report year = 2025,1708,1706,"SR/01873/25, SR/03775/24",8
+Alert publicationDate year = 2025,1677,1676,SR/01873/25,38
+Weekly report year = 2025 OR publicationDate year = 2025,1716,1714,"SR/01873/25, SR/03775/24",0

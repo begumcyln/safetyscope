@@ -1,0 +1,31 @@
+{
+  "run_started_utc": "2026-11-27T19:44:31+00:00",
+  "source_files": [
+    {
+      "file": "search_list_20261127_notification_list.xlsx",
+      "sha256": "aca3905863a34ea5622a134accd2954ad7b15be98647a68046c84e1e33c6cea1",
+      "rows": 1714
+    }
+  ],
+  "cross_file_duplicates_removed": 0,
+  "alerts": 1714,
+  "risk_type_rows": 1718,
+  "measure_rows": 2027,
+  "substance_mentions": 1822,
+  "uncertain_candidates": 1,
+  "xml_reports_cached": 202,
+  "alerts_matched_in_xml": 1714,
+  "database_tables": {
+    "alert": 1714,
+    "alert_also_found": 64,
+    "alert_measure": 2027,
+    "alert_risk_type": 1718,
+    "alert_substance": 1822,
+    "country": 56,
+    "product_type": 180,
+    "raw_export": 1714,
+    "risk_type": 6,
+    "substance": 67,
+    "substance_candidate": 1
+  }
+}

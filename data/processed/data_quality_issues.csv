@@ -1,0 +1,218 @@
+alert_number,issue_type,detail
+A12/01220/20,brand_missing,Brand is empty in the source
+SR/01931/25,brand_missing,Brand is empty in the source
+SR/01034/25,brand_missing,Brand is empty in the source
+SR/01168/25,brand_missing,Brand is empty in the source
+SR/00250/25,brand_missing,Brand is empty in the source
+SR/00661/25,brand_missing,Brand is empty in the source
+SR/00576/25,brand_missing,Brand is empty in the source
+SR/00358/25,brand_missing,Brand is empty in the source
+SR/00330/25,brand_missing,Brand is empty in the source
+SR/00479/25,brand_missing,Brand is empty in the source
+SR/00708/25,brand_missing,Brand is empty in the source
+SR/00902/25,brand_missing,Brand is empty in the source
+SR/00787/25,brand_missing,Brand is empty in the source
+SR/00812/25,brand_missing,Brand is empty in the source
+SR/01555/25,brand_missing,Brand is empty in the source
+SR/01415/25,brand_missing,Brand is empty in the source
+SR/01531/25,brand_missing,Brand is empty in the source
+SR/01561/25,brand_missing,Brand is empty in the source
+SR/01528/25,brand_missing,Brand is empty in the source
+SR/01572/25,brand_missing,Brand is empty in the source
+SR/01560/25,brand_missing,Brand is empty in the source
+SR/01549/25,brand_missing,Brand is empty in the source
+SR/01571/25,brand_missing,Brand is empty in the source
+SR/01533/25,brand_missing,Brand is empty in the source
+SR/01534/25,brand_missing,Brand is empty in the source
+SR/01809/25,brand_missing,Brand is empty in the source
+SR/02366/25,brand_missing,Brand is empty in the source
+SR/02197/25,brand_missing,Brand is empty in the source
+SR/02302/25,brand_missing,Brand is empty in the source
+SR/02710/25,brand_missing,Brand is empty in the source
+SR/02495/25,brand_missing,Brand is empty in the source
+SR/02411/25,brand_missing,Brand is empty in the source
+SR/02720/25,brand_missing,Brand is empty in the source
+SR/02687/25,brand_missing,Brand is empty in the source
+SR/02688/25,brand_missing,Brand is empty in the source
+SR/02719/25,brand_missing,Brand is empty in the source
+SR/02727/25,brand_missing,Brand is empty in the source
+SR/02726/25,brand_missing,Brand is empty in the source
+SR/02912/25,brand_missing,Brand is empty in the source
+SR/03850/25,brand_missing,Brand is empty in the source
+SR/03269/25,brand_missing,Brand is empty in the source
+SR/03270/25,brand_missing,Brand is empty in the source
+SR/03271/25,brand_missing,Brand is empty in the source
+SR/03365/25,brand_missing,Brand is empty in the source
+SR/03325/25,brand_missing,Brand is empty in the source
+SR/04504/25,brand_missing,Brand is empty in the source
+SR/03835/25,brand_missing,Brand is empty in the source
+SR/04123/25,brand_missing,Brand is empty in the source
+SR/04447/25,brand_missing,Brand is empty in the source
+SR/04337/25,brand_missing,Brand is empty in the source
+SR/04469/25,brand_missing,Brand is empty in the source
+SR/04479/25,brand_missing,Brand is empty in the source
+SR/01149/25,product_name_missing,Name is empty in the source
+A12/02639/24,product_name_missing,Name is empty in the source
+SR/00164/25,product_name_missing,Name is empty in the source
+SR/03817/24,product_name_missing,Name is empty in the source
+SR/00116/25,product_name_missing,Name is empty in the source
+SR/00117/25,product_name_missing,Name is empty in the source
+SR/00031/25,product_name_missing,Name is empty in the source
+SR/00278/25,product_name_missing,Name is empty in the source
+SR/01330/25,product_name_missing,Name is empty in the source
+SR/01336/25,product_name_missing,Name is empty in the source
+SR/01369/25,product_name_missing,Name is empty in the source
+SR/01366/25,product_name_missing,Name is empty in the source
+SR/01425/25,product_name_missing,Name is empty in the source
+SR/01387/25,product_name_missing,Name is empty in the source
+SR/01491/25,product_name_missing,Name is empty in the source
+SR/01603/25,product_name_missing,Name is empty in the source
+SR/01597/25,product_name_missing,Name is empty in the source
+SR/01965/25,product_name_missing,Name is empty in the source
+SR/02273/25,product_name_missing,Name is empty in the source
+SR/02378/25,product_name_missing,Name is empty in the source
+SR/02281/25,product_name_missing,Name is empty in the source
+SR/02282/25,product_name_missing,Name is empty in the source
+SR/02407/25,product_name_missing,Name is empty in the source
+SR/02767/25,product_name_missing,Name is empty in the source
+SR/02698/25,product_name_missing,Name is empty in the source
+SR/02967/25,product_name_missing,Name is empty in the source
+SR/02957/25,product_name_missing,Name is empty in the source
+SR/02924/25,product_name_missing,Name is empty in the source
+SR/03057/25,product_name_missing,Name is empty in the source
+SR/03334/25,product_name_missing,Name is empty in the source
+SR/03750/25,product_name_missing,Name is empty in the source
+SR/03809/25,product_name_missing,Name is empty in the source
+SR/04299/25,product_name_missing,Name is empty in the source
+SR/04275/25,product_name_missing,Name is empty in the source
+OR/00167/25,product_name_missing,Name is empty in the source
+SR/04353/25,product_name_missing,Name is empty in the source
+SR/01931/25,measure_date_unknown,compulsory measure 'Import rejected at border' has date 'Unknown'
+SR/01204/25,measure_date_unknown,compulsory measure 'Import rejected at border' has date 'Unknown'
+SR/01180/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00299/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00361/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00949/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/01019/25,measure_date_unknown,voluntary measure 'Destruction of the product' has date 'Unknown'
+SR/00978/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00978/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00989/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00989/25,measure_date_unknown,voluntary measure 'Recall of the product from end users' has date 'Unknown'
+SR/00988/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00988/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00986/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00986/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00993/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00993/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00982/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/00982/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01071/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01071/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01089/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01089/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01087/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01087/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01195/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01205/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01978/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01982/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02305/25,measure_date_unknown,voluntary measure 'Stop of sales' has date 'Unknown'
+SR/02156/25,measure_date_unknown,compulsory measure 'Stop of sales' has date 'Unknown'
+SR/02281/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02282/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02197/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02346/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02302/25,measure_date_unknown,voluntary measure 'Destruction of the product' has date 'Unknown'
+SR/02302/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02489/25,measure_date_unknown,voluntary measure 'Destruction of the product' has date 'Unknown'
+SR/02489/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02455/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02455/25,measure_date_unknown,voluntary measure 'Destruction of the product' has date 'Unknown'
+SR/02457/25,measure_date_unknown,voluntary measure 'Destruction of the product' has date 'Unknown'
+SR/02457/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02531/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/02697/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/02757/25,measure_date_unknown,voluntary measure 'Recall of the product from end users' has date 'Unknown'
+SR/02904/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/02904/25,measure_date_unknown,voluntary measure 'Recall of the product from end users' has date 'Unknown'
+SR/02890/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02895/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02891/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03037/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/02996/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03007/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03012/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03009/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03214/25,measure_date_unknown,compulsory measure 'Import rejected at border' has date 'Unknown'
+SR/03215/25,measure_date_unknown,compulsory measure 'Import rejected at border' has date 'Unknown'
+SR/03213/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/03244/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03244/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/03230/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03230/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/03268/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/03268/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03248/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03371/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03481/25,measure_date_unknown,voluntary measure 'Stop of sales' has date 'Unknown'
+SR/03866/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/03437/25,measure_date_unknown,compulsory measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/03437/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03437/25,measure_date_unknown,compulsory measure 'Seizure of goods' has date 'Unknown'
+SR/03535/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03503/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/04530/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/03597/25,measure_date_unknown,voluntary measure 'Stop of sales' has date 'Unknown'
+SR/03522/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/04504/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/03662/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03663/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03658/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03667/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03702/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03575/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/04490/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03816/25,measure_date_unknown,voluntary measure 'Recall of the product from end users' has date 'Unknown'
+SR/03653/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03640/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/03627/25,measure_date_unknown,compulsory measure 'Destruction of the product' has date 'Unknown'
+SR/04495/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/03634/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03700/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/03907/25,measure_date_unknown,voluntary measure 'Removal of this product listing by the online marketplace' has date 'Unknown'
+SR/04529/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/04496/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/04505/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/04447/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/04506/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/04477/25,measure_date_unknown,compulsory measure 'Ban on the marketing of the product and any accompanying measures' has date 'Unknown'
+SR/04337/25,measure_date_unknown,voluntary measure 'Recall of the product from end users' has date 'Unknown'
+SR/04289/25,measure_date_unknown,voluntary measure 'Destruction of the product' has date 'Unknown'
+SR/04402/25,measure_date_unknown,voluntary measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/04478/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/04479/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/04480/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/04481/25,measure_date_unknown,compulsory measure 'Withdrawal of the product from the market' has date 'Unknown'
+SR/01019/25,measure_after_report,Measure entry into force 2026-01-27 is after weekly report date 2025-03-21
+SR/01982/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-05-30
+SR/01982/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-05-30
+SR/02904/25,measure_after_report,Measure entry into force 2025-09-05 is after weekly report date 2025-08-08
+SR/03248/25,measure_after_report,Measure entry into force 2025-10-03 is after weekly report date 2025-09-12
+SR/03658/25,measure_after_report,Measure entry into force 2025-10-31 is after weekly report date 2025-10-24
+SR/03658/25,measure_after_report,Measure entry into force 2025-10-31 is after weekly report date 2025-10-24
+SR/03658/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-10-24
+SR/03658/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-10-24
+SR/03667/25,measure_after_report,Measure entry into force 2025-10-29 is after weekly report date 2025-10-24
+SR/03667/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-10-24
+SR/03667/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-10-24
+SR/03702/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-10-24
+SR/03702/25,measure_after_report,Measure entry into force 2026-05-18 is after weekly report date 2025-10-24
+SR/03710/25,measure_after_report,Measure entry into force 2025-10-25 is after weekly report date 2025-10-24
+SR/02757/25,no_substance_extracted,Risk text names no substance/agent in the dictionary
+SR/02795/25,no_substance_extracted,Risk text names no substance/agent in the dictionary
+SR/03816/25,no_substance_extracted,Risk text names no substance/agent in the dictionary
+SR/03849/25,no_substance_extracted,Risk text names no substance/agent in the dictionary
+OR/00167/25,no_substance_extracted,Risk text names no substance/agent in the dictionary
+OR/00136/25,uncertain_candidate,Unrecognised candidate: 'mesophilic bacteria'
+OR/00103/25,uncertain_substance,Hedged mention: Centella asiatica extract
+OR/00103/25,uncertain_substance,Hedged mention: Bakuchiol

@@ -1,0 +1,68 @@
+substance,abbreviation,agent_type,substance_group,cas_number,alias_patterns
+Butylphenyl methylpropional,BMHCA,chemical,Fragrance ingredient (CMR),80-54-6,2-\(4-tert-butylbenzyl\)\s?propionaldehyde || butylphenyl methylpropional || (?-i:\bBMHCA\b) || \blilial\b
+"Diphenyl(2,4,6-trimethylbenzoyl)phosphine oxide",TPO,chemical,Photoinitiator (nail products),75980-60-8,"diphenyl\s?\(2,4,6-trimethylbenzoyl\)\s?phosphine oxide || trimethylbenzoyl diphenylphosphine oxide || (?-i:\bTPO\b)"
+Hydroxyisohexyl 3-cyclohexene carboxaldehyde,HICC,chemical,Fragrance allergen,31906-04-4,hydroxyisohexyl 3-cyclohexene carboxaldehyde || (?-i:\bHICC\b)
+Trimethylolpropane triacrylate,TMPTA,chemical,Acrylate (nail products),15625-89-5,trimethylolpropane triacrylate || (?-i:\bTMPTA\b)
+2-Hydroxyethyl methacrylate,HEMA,chemical,Acrylate (nail products),868-77-9,2-hydroxyethyl methacrylate || (?-i:\bHEMA\b)
+Mequinol (p-hydroxyanisole),Mequinol,chemical,Other restricted ingredient,150-76-5,\bmequinol\b || p-hydroxyanisole || hydroquinone methyl ?ether
+Hydroquinone,,chemical,Skin-lightening agent,123-31-9,\bhydroquinone\b(?! methyl ?ether)
+Clobetasol propionate,,chemical,Corticosteroid,25122-46-7,clobetasol propionate
+Mercury,,chemical,Heavy metal / element,7439-97-6,\bmercury\b
+Lead,,chemical,Heavy metal / element,7439-92-1,\blead\b(?!\s+to\b)
+Arsenic,,chemical,Heavy metal / element,7440-38-2,\barsenic\b
+Antimony,,chemical,Heavy metal / element,7440-36-0,\bantimony\b
+Selenium,,chemical,Heavy metal / element,7782-49-2,\bselenium\b
+Barium,,chemical,Heavy metal / element,7440-39-3,\bbarium\b
+Cobalt,,chemical,Heavy metal / element,7440-48-4,\bcobalt\b
+Zirconium,,chemical,Heavy metal / element,7440-67-7,\bzirconium\b
+Nickel,,chemical,Heavy metal / element,7440-02-0,\bnickel\b
+Methylisothiazolinone,MI,chemical,Preservative,2682-20-4,(?<!chloro)methylisothiazolinonev?\b || (?-i:\(MI\))
+Methylchloroisothiazolinone,MCI,chemical,Preservative,26172-55-4,methylchloroisothiazolinone || (?-i:\bMCI\b)
+Formaldehyde,,chemical,Preservative,50-00-0,\bformaldehyde\b
+Isobutylparaben,,chemical,Preservative,4247-02-3,isobutylparaben
+Octamethylcyclotetrasiloxane,D4,chemical,Silicone,556-67-2,octamethylcyclotetrasiloxane || (?-i:\(D4\))
+Dibutyl phthalate,DBP,chemical,Phthalate,84-74-2,dibutyl phthalate || (?-i:\bDBP\b)
+Benzophenone,,chemical,UV absorber / other,119-61-9,\bbenzophenone\b
+N-Nitrosodiethanolamine,NDELA,chemical,Nitrosamine,1116-54-7,n-nitrosodiethanolamine || (?-i:\bNDELA\b)
+N-Nitrosodibutylamine,NDBA,chemical,Nitrosamine,924-16-3,n-nitrosodibutylamine || (?-i:\bNDBA\b)
+Trisodium nitrilotriacetate,,chemical,Other restricted ingredient,5064-31-3,trisodium nitrilotriacetate
+Hydrogen peroxide,,chemical,Oxidising / bleaching agent,7722-84-1,hydrogen peroxide
+Benzoyl peroxide,,chemical,Oxidising / bleaching agent,94-36-0,benzoyl peroxide
+Thioglycolic acid,,chemical,Other restricted ingredient,68-11-1,thioglycolic acid
+Glyoxylic acid,,chemical,Other restricted ingredient,298-12-4,glyoxylic acid
+Phenol,,chemical,Other restricted ingredient,108-95-2,\bphenol\b
+Estragole,,chemical,Fragrance ingredient,140-67-0,\bestragole\b
+Citral,,chemical,Fragrance allergen,5392-40-5,\bcitral\b
+Benzyl alcohol,,chemical,Fragrance allergen,100-51-6,benzyl alcohol
+Limonene,,chemical,Fragrance allergen,5989-27-5,\b(?:d-)?limonene\b
+Linalool,,chemical,Fragrance allergen,78-70-6,\blinalool\b
+Citronellol,,chemical,Fragrance allergen,106-22-9,\bcitronellol\b
+Geraniol,,chemical,Fragrance allergen,106-24-1,\bgeraniol\b
+Eugenol,,chemical,Fragrance allergen,97-53-0,(?<!iso)\beugenol\b
+Isoeugenol,,chemical,Fragrance allergen,97-54-1,\bisoeugenol\b
+Hexyl cinnamal,,chemical,Fragrance allergen,101-86-0,hexyl cinnamal
+Coumarin,,chemical,Fragrance allergen,91-64-5,\bcoumarin\b
+Alpha-isomethyl ionone,,chemical,Fragrance allergen,127-51-5,alpha-isomethyl ionone
+Bimatoprost,,chemical,Prostaglandin analogue,155206-00-1,\bbimatoprost\b
+Cloprostenol isopropyl ester,,chemical,Prostaglandin analogue,157283-66-4,cloprostenol isopropyl ester
+Delta-9-tetrahydrocannabinol,THC,chemical,Other restricted ingredient,1972-08-3,delta-9-tetrahydrocannabinol
+Carbon black (nano),CI 77266,chemical,Colorant,1333-86-4,carbon black || \bCI 77266\b
+Ethylhexyl methoxycinnamate,,chemical,UV filter,5466-77-3,ethylhexyl methoxycinnamate
+Padimate O,,chemical,UV filter,21245-02-3,padimate-?o\b
+CI 45160,,chemical,Colorant,,\bC[Il] 45160\b
+CI 45170,,chemical,Colorant,,\bC[Il] 45170\b
+CI 45174,,chemical,Colorant,,\bC[Il] 45174\b
+Solvent Yellow 172,,chemical,Colorant,,solvent yellow 172
+Basic Yellow 40,,chemical,Colorant,,basic yellow 40
+Pseudomonas aeruginosa,,microorganism,Bacteria,,pseudomonas aeruginosa
+Staphylococcus aureus,,microorganism,Bacteria,,staphylococcus aureus
+Burkholderia cepacia,,microorganism,Bacteria,,bur(?:k)?holderia cepacia
+Pluralibacter gergoviae,,microorganism,Bacteria,,pluralibacter gergoviae
+Gluconacetobacter liquefaciens,,microorganism,Bacteria,,gluconacetobacter liquefaciens
+Paenibacillus glucanolyticus,,microorganism,Bacteria,,paenibacillus glucanolyticus
+Candida parapsilosis,,microorganism,Yeast,,candida parapsilosis
+Aspergillus versicolor,,microorganism,Mould,,aspergillus versicolor
+Yeast (unspecified),,microorganism,Yeast,,contaminated with yeast || \byeast and\b
+Centella asiatica extract,,chemical,Plant extract,,centella asiatica
+Bakuchiol,,chemical,Plant extract,,\bbakuchiol\b
+Aerobic mesophilic microorganisms (unspecified),,microorganism,Total aerobic count,,(?:aerobic mesophilic|mesophilic aerobic|aerobic) (?:bacteria|microorganisms)(?! (?:pluralibacter|burholderia|burkholderia)) || excessive amount of aerobic mesophilic bacteria

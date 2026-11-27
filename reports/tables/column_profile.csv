@@ -1,0 +1,26 @@
+column,non_missing,missing,missing_pct,distinct_values,example
+Type of alert,1714,0,0.0,3,Serious risk
+Type,1714,0,0.0,2,Consumer
+Alert number,1714,0,0.0,1714,A12/01220/20
+Alert submitted by,1714,0,0.0,18,Sweden
+Country of origin,1714,0,0.0,52,Pakistan
+Counterfeit,1714,0,0.0,3,Unknown
+Risk type,1714,0,0.0,7,Chemical
+Risk legal provision,1714,0,0.0,21,The product does not comply with the Cosmetic Prod
+Product,1714,0,0.0,231,Skin lightening cream
+Name,1678,36,2.1,1572,Golden Pearl Beauty Cream
+Description,1714,0,0.0,976,Skin lightening cream in a plastic white jar of 28
+Brand,1662,52,3.0,666,Caro White
+Category,1714,0,0.0,1,Cosmetics
+Type / number of model,540,1174,68.5,529,8855659
+OECD Portal category,1714,0,0.0,3,53000000 - Beauty / Personal care / Hygiene
+Risk,1714,0,0.0,189,The product contains mercury (measured value: 16.8
+Compulsory measures,1628,86,5.0,279,Type of economic operator to whom the measure(s) w
+Voluntary measures,112,1602,93.5,83,Type of economic operator taking notified measure(
+Products were found and measures were taken also in,53,1661,96.9,19,Hungary
+Company recall page,36,1678,97.9,36,https://rich-nails.com/obavijest-kupcima/
+URL of Case,1714,0,0.0,1714,https://ec.europa.eu/safety-gate-alerts/screen/web
+Barcode,1537,177,10.3,1439,6192428704241
+Batch number,896,818,47.7,886,24AE03
+Packaging description,1698,16,0.9,414,Yellow outer cardboard packaging 
+Online trader,0,1714,100.0,0,

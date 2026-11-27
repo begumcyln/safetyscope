@@ -1,0 +1,5 @@
+pivot,excel_rows,python_distinct_raw_values,excel_total,python_total,mismatched_labels
+Risk Analysis,7,7,1714,1714,0
+Country Analysis,18,18,1714,1714,0
+Origin Analysis,52,52,1714,1714,0
+Product Analysis,230,231,1714,1714,1
