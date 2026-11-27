@@ -57,6 +57,7 @@ def build_database(alerts, risk_types, measures, also_found, substances, candida
         "alert_number": a["alert_number"], "case_id": a["case_id"], "case_url": a["case_url"],
         "alert_prefix": a["alert_prefix"], "alert_number_year": a["alert_number_year"],
         "publication_date": _iso(a["publication_date"]), "weekly_report": a["weekly_report"],
+        "weekly_report_date": _iso(a["weekly_report_date"]),
         "first_measure_date": _iso(a["first_measure_date"]),
         "alert_level": a["alert_level"], "user_type": a["user_type"],
         "notifying_country": a["notifying_country"], "origin_country": a["origin_country"],

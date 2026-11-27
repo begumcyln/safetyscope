@@ -61,6 +61,7 @@ CREATE TABLE alert (
     alert_number_year     INTEGER,            -- 20YY suffix of the alert number
     publication_date      TEXT,               -- from official XML (ISO date), NULL if not matched
     weekly_report         TEXT,               -- e.g. Report-2025-14
+    weekly_report_date    TEXT,               -- Friday the weekly report was published (ISO date)
     first_measure_date    TEXT,               -- earliest 'Date of entry into force'
     alert_level           TEXT,
     user_type             TEXT,

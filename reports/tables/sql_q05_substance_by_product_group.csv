@@ -1,0 +1,37 @@
+product_group,group_alerts,rank_in_group,substance,alerts,pct_of_group_alerts
+Fragrance,764,1,Butylphenyl methylpropional,760,99.5
+Fragrance,764,2,Hydroxyisohexyl 3-cyclohexene carboxaldehyde,19,2.5
+Fragrance,764,3,Limonene,3,0.4
+Hair care & styling,182,1,Butylphenyl methylpropional,164,90.1
+Hair care & styling,182,2,Methylisothiazolinone,8,4.4
+Hair care & styling,182,3,Methylchloroisothiazolinone,7,3.8
+Skin care,179,1,Butylphenyl methylpropional,148,82.7
+Skin care,179,2,Hydroxyisohexyl 3-cyclohexene carboxaldehyde,10,5.6
+Skin care,179,3,Clobetasol propionate,5,2.8
+"Bath, shower & soap",142,1,Butylphenyl methylpropional,134,94.4
+"Bath, shower & soap",142,2,Pluralibacter gergoviae,3,2.1
+"Bath, shower & soap",142,3,Burkholderia cepacia,2,1.4
+Deodorant,89,1,Butylphenyl methylpropional,89,100.0
+Deodorant,89,2,Hydroxyisohexyl 3-cyclohexene carboxaldehyde,1,1.1
+Hair dye & colouring,83,1,Butylphenyl methylpropional,82,98.8
+Nail products,83,1,"Diphenyl(2,4,6-trimethylbenzoyl)phosphine oxide",53,63.9
+Hair dye & colouring,83,2,Phenol,1,1.2
+Nail products,83,2,Trimethylolpropane triacrylate,18,21.7
+Nail products,83,3,2-Hydroxyethyl methacrylate,7,8.4
+Sets & kits,68,1,Butylphenyl methylpropional,58,85.3
+Sets & kits,68,2,Hydroxyisohexyl 3-cyclohexene carboxaldehyde,2,2.9
+Sets & kits,68,3,Lead,2,2.9
+Skin lightening,55,1,Hydroquinone,30,54.5
+Skin lightening,55,2,Mercury,13,23.6
+Skin lightening,55,3,Clobetasol propionate,11,20.0
+Sun & tanning,44,1,Butylphenyl methylpropional,35,79.5
+Sun & tanning,44,2,Hydroxyisohexyl 3-cyclohexene carboxaldehyde,4,9.1
+Sun & tanning,44,3,Pseudomonas aeruginosa,2,4.5
+Eye & lash products,13,1,Butylphenyl methylpropional,3,23.1
+Eye & lash products,13,2,Cloprostenol isopropyl ester,3,23.1
+Eye & lash products,13,3,Aerobic mesophilic microorganisms (unspecified),1,7.7
+Make-up & face paint,9,1,Butylphenyl methylpropional,6,66.7
+Make-up & face paint,9,2,Hydroxyisohexyl 3-cyclohexene carboxaldehyde,2,22.2
+Make-up & face paint,9,3,Aerobic mesophilic microorganisms (unspecified),1,11.1
+Oral care,3,1,Hydrogen peroxide,2,66.7
+Oral care,3,2,Aerobic mesophilic microorganisms (unspecified),1,33.3

@@ -1,0 +1,3 @@
+method,value
+Rows after joining alert_measure (naive COUNT(*)),2027
+Distinct alerts (COUNT(DISTINCT alert_number)),1714

@@ -116,6 +116,41 @@ def model_predict(ner, text: str) -> tuple[set[str], list[str]]:
     return canon, spans
 
 
+MODEL_CACHE = EVAL_DIR / "model_predictions_cache.csv"
+
+
+def get_model_cache(texts: pd.DataFrame, rerun: bool = False) -> dict[str, set[str]] | None:
+    """Model output per distinct text (canonical chemical names + unmapped spans).
+
+    The model is only loaded when no complete cache exists or --rerun-model is
+    given. Inference runs sequentially, one text at a time, and the model is
+    deleted and garbage-collected afterwards to release memory.
+    """
+    if MODEL_CACHE.exists() and not rerun:
+        cached = pd.read_csv(MODEL_CACHE, dtype=str).fillna("")
+        result = {r.text_id: split_labels(r.model_chem) for r in cached.itertuples()}
+        if set(texts["text_id"]) <= set(result):
+            print(f"Reusing cached model predictions ({MODEL_CACHE.name}); use --rerun-model to recompute.")
+            return result
+    try:
+        ner = load_model()
+    except Exception as exc:
+        print(f"Model unavailable ({exc}); continuing with rule-based results only.")
+        return None
+    rows = []
+    try:
+        for r in texts.itertuples():
+            canon, spans = model_predict(ner, r.text)
+            rows.append({"text_id": r.text_id, "model_chem": "; ".join(sorted(chemical_or_unmapped(canon))),
+                         "model_spans": " | ".join(spans), "source": f"inference {MODEL_ID}@{MODEL_REVISION[:12]}"})
+    finally:
+        import gc
+        del ner
+        gc.collect()
+    pd.DataFrame(rows).to_csv(MODEL_CACHE, index=False)
+    return {r["text_id"]: split_labels(r["model_chem"]) for r in rows}
+
+
 def prf(pred: list[set], gold: list[set], weights: list[int] | None = None) -> dict:
     weights = weights or [1] * len(pred)
     tp = sum(w * len(p & g) for p, g, w in zip(pred, gold, weights))
@@ -131,7 +166,9 @@ def prf(pred: list[set], gold: list[set], weights: list[int] | None = None) -> d
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--no-model", action="store_true")
+    parser.add_argument("--no-model", action="store_true", help="rule-based results only")
+    parser.add_argument("--rerun-model", action="store_true",
+                        help="run the NER model again instead of reusing the cached predictions (needs ~1 GB RAM)")
     args = parser.parse_args()
     EVAL_DIR.mkdir(parents=True, exist_ok=True)
     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
@@ -158,17 +195,11 @@ def main() -> None:
     sample["rule_pred"] = sample["text"].map(rule_predict)
 
     use_model = not args.no_model
-    ner = None
+    cache = get_model_cache(texts, rerun=args.rerun_model) if use_model else None
+    if cache is None:
+        use_model = False
     if use_model:
-        try:
-            ner = load_model()
-        except Exception as exc:
-            print(f"Model unavailable ({exc}); continuing with rule-based results only.")
-            use_model = False
-    if use_model:
-        preds = [model_predict(ner, t) for t in sample["text"]]
-        sample["model_pred"] = [p for p, _ in preds]
-        sample["model_spans"] = [" | ".join(s) for _, s in preds]
+        sample["model_chem"] = sample["text_id"].map(cache)
 
     # ---- metrics -------------------------------------------------------------
     rows = []
@@ -180,11 +211,9 @@ def main() -> None:
     rows.append({"method": "Rule-based (chemicals only)", "weighting": "per distinct text", **prf(rule_chem, gold_chem)})
     rows.append({"method": "Rule-based (chemicals only)", "weighting": "per alert", **prf(rule_chem, gold_chem, w)})
     if use_model:
-        # keep: mapped chemicals + unmapped spans (which count as false positives)
-        model_sets = [chemical_or_unmapped(p) for p in sample["model_pred"]]
+        model_sets = list(sample["model_chem"])
         rows.append({"method": f"NER model {MODEL_ID.split('/')[-1]} (chemicals)", "weighting": "per distinct text", **prf(model_sets, gold_chem)})
         rows.append({"method": f"NER model {MODEL_ID.split('/')[-1]} (chemicals)", "weighting": "per alert", **prf(model_sets, gold_chem, w)})
-        sample["model_chem"] = model_sets
     metrics = pd.DataFrame(rows)
     metrics.to_csv(EVAL_DIR / "extraction_metrics.csv", index=False)
 
@@ -216,7 +245,7 @@ def main() -> None:
     if use_model:
         full = texts.copy()
         full["rule_chem"] = full["text"].map(lambda t: rule_predict(t) & CHEMICALS)
-        full["model_chem"] = [chemical_or_unmapped(model_predict(ner, t)[0]) for t in full["text"]]
+        full["model_chem"] = full["text_id"].map(cache)
         full["agree"] = full["rule_chem"] == full["model_chem"]
         coverage = {
             "distinct_texts": len(full),

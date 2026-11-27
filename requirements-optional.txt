@@ -1,0 +1,8 @@
+# Optional: only needed to RE-RUN the pretrained NER comparison
+#   python src/evaluate_extraction.py --rerun-model
+# The project reuses cached model predictions by default, so these large
+# packages (~1 GB RAM when the model is loaded) are not required.
+torch>=2.5
+transformers>=4.46
+# Optional: only for reading the Safety Gate disclaimer PDF during research
+pypdf>=5.0
