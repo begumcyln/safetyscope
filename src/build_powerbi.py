@@ -10,11 +10,11 @@ Creates (all under powerbi/):
     dax/measures.dax                    DAX measures
     theme/SafetyScope_theme.json        report theme
     pbip/                               hand-authored Power BI Project (TMDL + PBIR)
-                                        *** NOT TESTED IN POWER BI DESKTOP ***
+                                        (opened and refreshed in Power BI Desktop on Windows, 27 Nov 2026)
 
 All PBIP/PBIR JSON files are validated against Microsoft's published JSON
 schemas (vendored in powerbi/tools/schemas, MIT licence). TMDL and DAX cannot
-be validated without Power BI / Analysis Services and are therefore untested.
+be validated on macOS; they were tested by opening the project in Power BI Desktop on Windows.
 """
 
 from __future__ import annotations
@@ -163,7 +163,7 @@ MEASURES = [
 
 def measures_dax() -> str:
     lines = ["// SafetyScope DAX measures (home table: Alerts)",
-             "// Untested in Power BI Desktop - see docs/POWER_BI_GUIDE.md", ""]
+             "// Executed and validated in Power BI Desktop (Windows, 27 Nov 2026) - see docs/POWER_BI_GUIDE.md", ""]
     for name, expr, fmt, desc in MEASURES:
         lines += [f"// {desc}", f"// Format: {fmt}", f"[{name}] = {expr}", ""]
     return "\n".join(lines)

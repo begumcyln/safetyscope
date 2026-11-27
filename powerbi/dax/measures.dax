@@ -1,5 +1,5 @@
 // SafetyScope DAX measures (home table: Alerts)
-// Untested in Power BI Desktop - see docs/POWER_BI_GUIDE.md
+// Executed and validated in Power BI Desktop (Windows, 27 Nov 2026) - see docs/POWER_BI_GUIDE.md
 
 // Number of distinct Safety Gate alerts in the current filter context.
 // Format: #,0

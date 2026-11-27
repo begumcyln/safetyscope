@@ -104,7 +104,12 @@ included a query that shows the wrong and right count side by side (2,027 vs 1,7
 
 **Q: What would you improve?**
 A: Human review of the evaluation labels, a second export to test the dictionary on unseen data, a confirmed
-definition of the portal's date filter, and testing the Power BI project in Desktop.
+definition of the portal's date filter, and polishing the Power BI report (theme, sorting) now that it runs in Desktop.
+
+**Q: How did you build a Power BI report on a Mac?**
+A: Power BI Desktop is Windows-only, so the project was written as a Power BI Project — text files describing the
+model and report — and checked against Microsoft's published schemas. I then opened it on a Windows computer,
+refreshed it and confirmed that every KPI matched the Python and SQL results.
 
 **Q: What was your role versus the AI assistant?**
 A: I defined the problem, supplied the data and the manual Excel baseline, set the requirements and reviewed the

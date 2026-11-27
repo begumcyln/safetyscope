@@ -63,7 +63,11 @@ NLP evaluation were produced by the AI and await the owner's review. All work wa
 - **Constraint:** Power BI Desktop is Windows-only; development on macOS.
 - **Actions:** star-schema CSVs and an Excel upload workbook for app.powerbi.com; M scripts; 17 DAX measures with
   reference values; theme; hand-authored PBIP whose 39 JSON files pass Microsoft's schemas.
-- **Limitation:** nothing was opened in Power BI; TMDL/DAX are untested (labelled everywhere).
+- **Windows validation (project owner):** a minimal package (PBIP + CSVs + instructions) was opened in Power BI
+  Desktop on a separate Windows computer, refreshed successfully, and all KPI cards matched the Python/SQL reference
+  values (1,714 alerts; 86.8% BMHCA; 57 chemicals; 18 notifying countries; median 289 days; 1,292 bans). The saved
+  report is `powerbi/SafetyScope.pbix`; screenshots are in `assets/screenshots/powerbi_*.jpg`.
+- **Remaining limitation:** the custom theme was not applied, and some bar charts use alphabetical sorting.
 
 ### Stage G — Streamlit application
 - **Actions:** six pages, global filters, case links, CSV download, provenance page; headless `AppTest` tests;
