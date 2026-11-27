@@ -62,7 +62,14 @@ def split_measures(text: str | None) -> tuple[str | None, str | None]:
     return ("\n\n".join(comp) or None), ("\n\n".join(vol) or None)
 
 
+XML_FIELDS = ["level", "type", "caseNumber", "notifyingCountry", "countryOfOrigin", "riskType", "product", "name",
+              "description", "brand", "category", "type_numberOfModel", "danger", "measures", "URLrecall",
+              "reference", "barcode", "batchNumber", "onlineTrader"]
+
+
 def to_export_layout(x: pd.DataFrame) -> pd.DataFrame:
+    x = x.reindex(columns=XML_FIELDS)  # optional tags may be absent in a report
+    x = x.astype(object).where(x.notna(), None)
     rows = []
     for r in x.itertuples():
         comp, vol = split_measures(getattr(r, "measures", None))

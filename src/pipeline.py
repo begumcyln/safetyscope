@@ -60,6 +60,12 @@ def main() -> dict:
     alerts = T.build_alerts(raw)
 
     xml = load_cached_reports()
+    xml_snapshot = C.PROCESSED_DIR / "xml_cosmetics_alerts.csv"
+    if xml.empty and xml_snapshot.exists():
+        # Fresh clone: the raw XML cache is not in Git, but the committed snapshot of
+        # the cosmetics alerts it contained is enough for the date enrichment.
+        print("No cached XML reports; using committed snapshot data/processed/xml_cosmetics_alerts.csv")
+        xml = pd.read_csv(xml_snapshot, dtype=str)
     alerts = T.add_xml_enrichment(alerts, xml)
 
     risk_types = T.build_risk_types(alerts)

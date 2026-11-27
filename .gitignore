@@ -8,3 +8,6 @@ __pycache__/
 data/external/weekly_reports/*.xml
 logs/
 .cache/
+
+# Local tool settings
+.claude/
