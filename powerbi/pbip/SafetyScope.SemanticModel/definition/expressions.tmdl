@@ -1,0 +1,3 @@
+/// Folder that contains the SafetyScope CSV files (must end with a backslash on Windows).
+expression DataFolder = "C:\SafetyScope\powerbi\data\" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 291095e6-8afc-568e-961a-be2046270f3d

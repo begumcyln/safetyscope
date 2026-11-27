@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "table_profiles",
+  "position": {
+    "x": 860,
+    "y": 150,
+    "z": 7,
+    "width": 400,
+    "height": 550,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "notifying_country"
+                }
+              },
+              "queryRef": "Alerts.notifying_country",
+              "nativeQueryRef": "notifying_country"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "Total Alerts"
+                }
+              },
+              "queryRef": "Alerts.Total Alerts",
+              "nativeQueryRef": "Total Alerts"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "BMHCA Share"
+                }
+              },
+              "queryRef": "Alerts.BMHCA Share",
+              "nativeQueryRef": "BMHCA Share"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "Ingredient-List Based %"
+                }
+              },
+              "queryRef": "Alerts.Ingredient-List Based %",
+              "nativeQueryRef": "Ingredient-List Based %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "Lab Measurement %"
+                }
+              },
+              "queryRef": "Alerts.Lab Measurement %",
+              "nativeQueryRef": "Lab Measurement %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

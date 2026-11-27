@@ -1,0 +1,37 @@
+table AlertSubstances
+	lineageTag: f0301b04-a046-5a1c-ab78-bbb09bfb0ce0
+
+	column alert_number
+		dataType: string
+		lineageTag: 6518c624-9a1e-5ee4-993d-49193c9731a4
+		summarizeBy: none
+		sourceColumn: alert_number
+
+	column substance
+		dataType: string
+		lineageTag: 7e721872-1793-59ad-b3c6-e5defd3a50c4
+		summarizeBy: none
+		sourceColumn: substance
+
+	column mention_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 24bd29e8-0282-5549-8a30-b60e69174b16
+		summarizeBy: none
+		sourceColumn: mention_order
+
+	column confidence
+		dataType: string
+		lineageTag: 399c98f5-1889-51e7-9da8-d21a1b414323
+		summarizeBy: none
+		sourceColumn: confidence
+
+	partition AlertSubstances = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "alert_substances.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"alert_number", type text}, {"substance", type text}, {"mention_order", Int64.Type}, {"confidence", type text}}, "en-US")
+				in
+				    Typed

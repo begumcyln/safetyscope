@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "bar_measure_group",
+  "position": {
+    "x": 640,
+    "y": 150,
+    "z": 6,
+    "width": 620,
+    "height": 260,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CorrectiveMeasures"
+                    }
+                  },
+                  "Property": "measure_group"
+                }
+              },
+              "queryRef": "CorrectiveMeasures.measure_group",
+              "nativeQueryRef": "measure_group"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "Measure Rows"
+                }
+              },
+              "queryRef": "Alerts.Measure Rows",
+              "nativeQueryRef": "Measure Rows"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

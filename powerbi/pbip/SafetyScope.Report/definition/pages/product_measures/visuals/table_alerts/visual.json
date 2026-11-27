@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "table_alerts",
+  "position": {
+    "x": 640,
+    "y": 430,
+    "z": 7,
+    "width": 620,
+    "height": 270,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "alert_number"
+                }
+              },
+              "queryRef": "Alerts.alert_number",
+              "nativeQueryRef": "alert_number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "product_type"
+                }
+              },
+              "queryRef": "Alerts.product_type",
+              "nativeQueryRef": "product_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "brand"
+                }
+              },
+              "queryRef": "Alerts.brand",
+              "nativeQueryRef": "brand"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "primary_substance"
+                }
+              },
+              "queryRef": "Alerts.primary_substance",
+              "nativeQueryRef": "primary_substance"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "case_url"
+                }
+              },
+              "queryRef": "Alerts.case_url",
+              "nativeQueryRef": "case_url"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

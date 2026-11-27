@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
+  "pageOrder": [
+    "executive_overview",
+    "chemical_risk",
+    "country_market",
+    "product_measures"
+  ],
+  "activePageName": "executive_overview"
+}

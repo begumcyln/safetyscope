@@ -1,0 +1,24 @@
+table AlertRiskTypes
+	lineageTag: a91d7df2-d5ed-5d63-8090-73498002f1cb
+
+	column alert_number
+		dataType: string
+		lineageTag: 13a2e7da-cd7d-5950-83b5-30d22189206f
+		summarizeBy: none
+		sourceColumn: alert_number
+
+	column risk_type
+		dataType: string
+		lineageTag: c7d0005a-7923-5855-81ce-b7b5a9deffdd
+		summarizeBy: none
+		sourceColumn: risk_type
+
+	partition AlertRiskTypes = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "alert_risk_types.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"alert_number", type text}, {"risk_type", type text}}, "en-US")
+				in
+				    Typed

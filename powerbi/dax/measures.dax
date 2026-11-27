@@ -1,0 +1,70 @@
+// SafetyScope DAX measures (home table: Alerts)
+// Untested in Power BI Desktop - see docs/POWER_BI_GUIDE.md
+
+// Number of distinct Safety Gate alerts in the current filter context.
+// Format: #,0
+[Total Alerts] = DISTINCTCOUNT(Alerts[alert_number])
+
+// Alerts as a share of all alerts in the current slicer selection.
+// Format: 0.0%
+[Share of Selected Alerts] = DIVIDE([Total Alerts], CALCULATE([Total Alerts], ALLSELECTED()))
+
+// Alerts whose risk text names BMHCA (butylphenyl methylpropional).
+// Format: #,0
+[BMHCA Alerts] = CALCULATE([Total Alerts], AlertSubstances[substance] = "Butylphenyl methylpropional")
+
+// Share of alerts naming BMHCA.
+// Format: 0.0%
+[BMHCA Share] = DIVIDE([BMHCA Alerts], [Total Alerts])
+
+// Number of distinct chemical substances named.
+// Format: #,0
+[Distinct Chemicals] = CALCULATE(DISTINCTCOUNT(AlertSubstances[substance]), Substances[agent_type] = "chemical")
+
+// Alert-substance pairs. Larger than Total Alerts when alerts name several substances.
+// Format: #,0
+[Substance Mentions] = COUNTROWS(AlertSubstances)
+
+// Distinct notifying countries.
+// Format: #,0
+[Notifying Countries] = DISTINCTCOUNT(Alerts[notifying_country])
+
+// Share of alerts whose risk text says the finding is based on the list of ingredients.
+// Format: 0.0%
+[Ingredient-List Based %] = DIVIDE(CALCULATE([Total Alerts], Alerts[based_on_ingredient_list] = TRUE()), [Total Alerts])
+
+// Share of alerts reporting a measured value.
+// Format: 0.0%
+[Lab Measurement %] = DIVIDE(CALCULATE([Total Alerts], Alerts[has_measured_value] = TRUE()), [Total Alerts])
+
+// Share of alerts with unknown country of origin.
+// Format: 0.0%
+[Origin Unknown %] = DIVIDE(CALCULATE([Total Alerts], Alerts[origin_country] = "Unknown"), [Total Alerts])
+
+// Median days from the first measure's entry into force to the weekly report.
+// Format: #,0
+[Median Days Measure to Report] = MEDIAN(Alerts[days_measure_to_report])
+
+// Alerts with at least one ban-on-marketing measure.
+// Format: #,0
+[Alerts with Ban on Marketing] = CALCULATE([Total Alerts], CorrectiveMeasures[measure_group] = "Ban on marketing", CROSSFILTER(CorrectiveMeasures[alert_number], Alerts[alert_number], Both))
+
+// Alerts with at least one recall from end users.
+// Format: #,0
+[Alerts with Recall] = CALCULATE([Total Alerts], CorrectiveMeasures[measure_group] = "Recall from end users", CROSSFILTER(CorrectiveMeasures[alert_number], Alerts[alert_number], Both))
+
+// Share of alerts with a recall.
+// Format: 0.0%
+[Recall %] = DIVIDE([Alerts with Recall], [Total Alerts])
+
+// Alerts with at least one company-initiated (voluntary) measure.
+// Format: #,0
+[Alerts with Voluntary Measure] = CALCULATE([Total Alerts], CorrectiveMeasures[measure_kind] = "voluntary", CROSSFILTER(CorrectiveMeasures[alert_number], Alerts[alert_number], Both))
+
+// Number of measures (not alerts). Use Total Alerts for alert counts.
+// Format: #,0
+[Measure Rows] = COUNTROWS(CorrectiveMeasures)
+
+// Average alerts per weekly report in the selection.
+// Format: #,0.0
+[Alerts per Weekly Report] = AVERAGEX(VALUES(Alerts[weekly_report]), [Total Alerts])

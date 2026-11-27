@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "matrix_substance_product",
+  "position": {
+    "x": 640,
+    "y": 150,
+    "z": 6,
+    "width": 620,
+    "height": 550,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Substances"
+                    }
+                  },
+                  "Property": "substance_label"
+                }
+              },
+              "queryRef": "Substances.substance_label",
+              "nativeQueryRef": "substance_label"
+            }
+          ]
+        },
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "product_group"
+                }
+              },
+              "queryRef": "Alerts.product_group",
+              "nativeQueryRef": "product_group"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alerts"
+                    }
+                  },
+                  "Property": "Total Alerts"
+                }
+              },
+              "queryRef": "Alerts.Total Alerts",
+              "nativeQueryRef": "Total Alerts"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

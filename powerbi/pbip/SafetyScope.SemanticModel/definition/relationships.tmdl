@@ -1,0 +1,21 @@
+relationship 21139467-a9ee-5b71-99c0-8c46932252d3
+	crossFilteringBehavior: bothDirections
+	fromColumn: AlertSubstances.alert_number
+	toColumn: Alerts.alert_number
+
+relationship e2948ecc-943f-578e-a3ef-7c9a565a193a
+	fromColumn: AlertSubstances.substance
+	toColumn: Substances.substance
+
+relationship cf5b5865-5512-59f7-bf47-8b39489572ec
+	fromColumn: CorrectiveMeasures.alert_number
+	toColumn: Alerts.alert_number
+
+relationship 8ddfc5d4-ff69-5077-b2d3-f9df63e90d00
+	crossFilteringBehavior: bothDirections
+	fromColumn: AlertRiskTypes.alert_number
+	toColumn: Alerts.alert_number
+
+relationship 7e922670-ae7c-5796-a7b4-67a2eef23231
+	fromColumn: Alerts.weekly_report_date
+	toColumn: Calendar.Date

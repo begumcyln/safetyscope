@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "slicer_substance_group",
+  "position": {
+    "x": 800,
+    "y": 20,
+    "z": 4,
+    "width": 460,
+    "height": 110,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Substances"
+                    }
+                  },
+                  "Property": "substance_group"
+                }
+              },
+              "queryRef": "Substances.substance_group",
+              "nativeQueryRef": "substance_group"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

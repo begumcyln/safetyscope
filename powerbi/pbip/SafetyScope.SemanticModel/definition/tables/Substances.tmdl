@@ -1,0 +1,48 @@
+table Substances
+	lineageTag: 1bf4d8dc-7975-5ec0-a91b-9c0776775d20
+
+	column substance
+		dataType: string
+		lineageTag: 6e1f4471-58ce-594b-9dac-6d531e38d543
+		summarizeBy: none
+		sourceColumn: substance
+
+	column abbreviation
+		dataType: string
+		lineageTag: 0936fe68-4047-5b41-8b16-d8595ce7ce1a
+		summarizeBy: none
+		sourceColumn: abbreviation
+
+	column agent_type
+		dataType: string
+		lineageTag: 2fddb9ce-6699-5816-89fe-59b8ee8a8531
+		summarizeBy: none
+		sourceColumn: agent_type
+
+	column substance_group
+		dataType: string
+		lineageTag: 9d1a0eee-2b4f-5562-bb5f-5c6ed7ea9f19
+		summarizeBy: none
+		sourceColumn: substance_group
+
+	column cas_number
+		dataType: string
+		lineageTag: b4fc4881-bfba-5977-85db-77162341831d
+		summarizeBy: none
+		sourceColumn: cas_number
+
+	column substance_label
+		dataType: string
+		lineageTag: a393688a-2049-5e38-a571-08053a08621c
+		summarizeBy: none
+		sourceColumn: substance_label
+
+	partition Substances = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "substances.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"substance", type text}, {"abbreviation", type text}, {"agent_type", type text}, {"substance_group", type text}, {"cas_number", type text}, {"substance_label", type text}}, "en-US")
+				in
+				    Typed

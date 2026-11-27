@@ -1,0 +1,49 @@
+table CorrectiveMeasures
+	lineageTag: 731dcbb0-ef5c-5e11-b54e-19922fc94092
+
+	column alert_number
+		dataType: string
+		lineageTag: b29b2abb-4800-5890-b4bf-d9399ba365c2
+		summarizeBy: none
+		sourceColumn: alert_number
+
+	column measure_kind
+		dataType: string
+		lineageTag: 9cd7fa3a-e76f-508a-8bb2-98d16cfaa33e
+		summarizeBy: none
+		sourceColumn: measure_kind
+
+	column measure_group
+		dataType: string
+		lineageTag: 5db6ff43-1fbb-5a92-a974-5ba1188e2cf4
+		summarizeBy: none
+		sourceColumn: measure_group
+
+	column measure_category
+		dataType: string
+		lineageTag: ddab3e6f-fee1-55e8-aa86-d53040dcd353
+		summarizeBy: none
+		sourceColumn: measure_category
+
+	column economic_operator
+		dataType: string
+		lineageTag: ef672e0f-1fc7-52ec-9420-720947d3aa19
+		summarizeBy: none
+		sourceColumn: economic_operator
+
+	column entry_into_force_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 10ae4372-a46c-56f6-a274-fdc738a85bce
+		summarizeBy: none
+		sourceColumn: entry_into_force_date
+
+	partition CorrectiveMeasures = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "corrective_measures.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"alert_number", type text}, {"measure_kind", type text}, {"measure_group", type text}, {"measure_category", type text}, {"economic_operator", type text}, {"entry_into_force_date", type date}}, "en-US")
+				in
+				    Typed

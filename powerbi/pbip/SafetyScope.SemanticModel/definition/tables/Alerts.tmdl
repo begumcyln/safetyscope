@@ -1,0 +1,235 @@
+table Alerts
+	lineageTag: 127ba64c-03da-58c1-810b-ebf6a354fa04
+
+	/// Number of distinct Safety Gate alerts in the current filter context.
+	measure 'Total Alerts' = DISTINCTCOUNT(Alerts[alert_number])
+		formatString: #,0
+		lineageTag: 4e2824e9-aff7-5e13-b729-4e032e3221c0
+
+	/// Alerts as a share of all alerts in the current slicer selection.
+	measure 'Share of Selected Alerts' = DIVIDE([Total Alerts], CALCULATE([Total Alerts], ALLSELECTED()))
+		formatString: 0.0%
+		lineageTag: 2e7db35d-1155-514a-a044-1a1f9eb1db72
+
+	/// Alerts whose risk text names BMHCA (butylphenyl methylpropional).
+	measure 'BMHCA Alerts' = CALCULATE([Total Alerts], AlertSubstances[substance] = "Butylphenyl methylpropional")
+		formatString: #,0
+		lineageTag: cea6f82f-800e-531e-a153-d0739eda6423
+
+	/// Share of alerts naming BMHCA.
+	measure 'BMHCA Share' = DIVIDE([BMHCA Alerts], [Total Alerts])
+		formatString: 0.0%
+		lineageTag: 6b894440-db7d-5ff6-b0d6-c98460de21bd
+
+	/// Number of distinct chemical substances named.
+	measure 'Distinct Chemicals' = CALCULATE(DISTINCTCOUNT(AlertSubstances[substance]), Substances[agent_type] = "chemical")
+		formatString: #,0
+		lineageTag: 0c27f689-89a9-5082-961d-5b0cf2301068
+
+	/// Alert-substance pairs. Larger than Total Alerts when alerts name several substances.
+	measure 'Substance Mentions' = COUNTROWS(AlertSubstances)
+		formatString: #,0
+		lineageTag: c60c0da7-4cab-51f5-a57e-32457fe62ad0
+
+	/// Distinct notifying countries.
+	measure 'Notifying Countries' = DISTINCTCOUNT(Alerts[notifying_country])
+		formatString: #,0
+		lineageTag: 15393c7c-fb61-569b-ae31-c90c3ea1f486
+
+	/// Share of alerts whose risk text says the finding is based on the list of ingredients.
+	measure 'Ingredient-List Based %' = DIVIDE(CALCULATE([Total Alerts], Alerts[based_on_ingredient_list] = TRUE()), [Total Alerts])
+		formatString: 0.0%
+		lineageTag: 1ba934ed-3981-5b64-9370-dccc47e544d8
+
+	/// Share of alerts reporting a measured value.
+	measure 'Lab Measurement %' = DIVIDE(CALCULATE([Total Alerts], Alerts[has_measured_value] = TRUE()), [Total Alerts])
+		formatString: 0.0%
+		lineageTag: ca790712-b0d3-58bc-8c95-6a145c853e67
+
+	/// Share of alerts with unknown country of origin.
+	measure 'Origin Unknown %' = DIVIDE(CALCULATE([Total Alerts], Alerts[origin_country] = "Unknown"), [Total Alerts])
+		formatString: 0.0%
+		lineageTag: 07e838b1-d92f-59d5-8055-7271202022d7
+
+	/// Median days from the first measure's entry into force to the weekly report.
+	measure 'Median Days Measure to Report' = MEDIAN(Alerts[days_measure_to_report])
+		formatString: #,0
+		lineageTag: 36508c23-9723-5aee-b250-8a99ac5549f6
+
+	/// Alerts with at least one ban-on-marketing measure.
+	measure 'Alerts with Ban on Marketing' = CALCULATE([Total Alerts], CorrectiveMeasures[measure_group] = "Ban on marketing", CROSSFILTER(CorrectiveMeasures[alert_number], Alerts[alert_number], Both))
+		formatString: #,0
+		lineageTag: 582911a9-97af-56b3-aff8-1f1f65020608
+
+	/// Alerts with at least one recall from end users.
+	measure 'Alerts with Recall' = CALCULATE([Total Alerts], CorrectiveMeasures[measure_group] = "Recall from end users", CROSSFILTER(CorrectiveMeasures[alert_number], Alerts[alert_number], Both))
+		formatString: #,0
+		lineageTag: f54d522c-0347-56cf-b993-97146ab47c7b
+
+	/// Share of alerts with a recall.
+	measure 'Recall %' = DIVIDE([Alerts with Recall], [Total Alerts])
+		formatString: 0.0%
+		lineageTag: c487d157-4f73-59ba-bc9f-bba3e1c0b8d9
+
+	/// Alerts with at least one company-initiated (voluntary) measure.
+	measure 'Alerts with Voluntary Measure' = CALCULATE([Total Alerts], CorrectiveMeasures[measure_kind] = "voluntary", CROSSFILTER(CorrectiveMeasures[alert_number], Alerts[alert_number], Both))
+		formatString: #,0
+		lineageTag: 0738a364-4fdc-5817-9d60-238eac844dd5
+
+	/// Number of measures (not alerts). Use Total Alerts for alert counts.
+	measure 'Measure Rows' = COUNTROWS(CorrectiveMeasures)
+		formatString: #,0
+		lineageTag: 048010fc-dcbf-5672-a21f-58c67bfdb9d1
+
+	/// Average alerts per weekly report in the selection.
+	measure 'Alerts per Weekly Report' = AVERAGEX(VALUES(Alerts[weekly_report]), [Total Alerts])
+		formatString: #,0.0
+		lineageTag: 7f50dc3d-1e25-5ffe-ba05-b8adb5327121
+
+	column alert_number
+		dataType: string
+		lineageTag: 885fd139-f51a-519f-a9e7-eb6cdf776225
+		summarizeBy: none
+		sourceColumn: alert_number
+
+	column case_url
+		dataType: string
+		lineageTag: 833cf6a9-a389-5e2d-a365-486eb9851efc
+		summarizeBy: none
+		sourceColumn: case_url
+		dataCategory: WebUrl
+
+	column alert_level
+		dataType: string
+		lineageTag: c52a8d8f-a4c4-58f9-ab09-9e74b54b784f
+		summarizeBy: none
+		sourceColumn: alert_level
+
+	column user_type
+		dataType: string
+		lineageTag: 9df5c7fb-6793-5c3f-b855-75e6401f6871
+		summarizeBy: none
+		sourceColumn: user_type
+
+	column notifying_country
+		dataType: string
+		lineageTag: 9df51f6c-017b-59ed-b913-b29a4bb3bbdf
+		summarizeBy: none
+		sourceColumn: notifying_country
+
+	column origin_country
+		dataType: string
+		lineageTag: 59acb6e0-f370-5001-ac57-f9fc50937dc3
+		summarizeBy: none
+		sourceColumn: origin_country
+
+	column origin_region
+		dataType: string
+		lineageTag: a98b6bdd-9707-5656-b77f-7a6f5f55ea7e
+		summarizeBy: none
+		sourceColumn: origin_region
+
+	column product_type
+		dataType: string
+		lineageTag: 43820cff-2103-530a-92a3-1193ba8b0dfd
+		summarizeBy: none
+		sourceColumn: product_type
+
+	column product_group
+		dataType: string
+		lineageTag: 487ba65a-8ff9-5c75-8c81-6047eedd675a
+		summarizeBy: none
+		sourceColumn: product_group
+
+	column product_name
+		dataType: string
+		lineageTag: 5bb954fa-24c9-54ba-810f-4e5a70e27c91
+		summarizeBy: none
+		sourceColumn: product_name
+
+	column brand
+		dataType: string
+		lineageTag: 19086e32-8776-54ec-b9c3-16df08c9db33
+		summarizeBy: none
+		sourceColumn: brand
+
+	column risk_type
+		dataType: string
+		lineageTag: e68d49f2-66fa-5c38-bc07-9c18adfb87f1
+		summarizeBy: none
+		sourceColumn: risk_type
+
+	column primary_substance
+		dataType: string
+		lineageTag: f0fd8922-1ecf-56e8-ae95-6ee506feca44
+		summarizeBy: none
+		sourceColumn: primary_substance
+
+	column weekly_report
+		dataType: string
+		lineageTag: e37f9b06-18ee-5d08-ae45-03a848a1e485
+		summarizeBy: none
+		sourceColumn: weekly_report
+
+	column weekly_report_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 24a48cfb-ceb8-5036-9650-957e07627e81
+		summarizeBy: none
+		sourceColumn: weekly_report_date
+
+	column publication_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 1613f5fc-a037-5f85-9459-bf51b3c3d970
+		summarizeBy: none
+		sourceColumn: publication_date
+
+	column first_measure_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: d5353d15-9e40-5f7d-84cf-ce615fb20d70
+		summarizeBy: none
+		sourceColumn: first_measure_date
+
+	column days_measure_to_report
+		dataType: int64
+		formatString: 0
+		lineageTag: fa945b78-dfde-5819-9b5d-6b811f3a52b0
+		summarizeBy: none
+		sourceColumn: days_measure_to_report
+
+	column based_on_ingredient_list
+		dataType: boolean
+		lineageTag: ab4f6335-fe50-5ac7-8808-e30554471c30
+		summarizeBy: none
+		sourceColumn: based_on_ingredient_list
+
+	column has_measured_value
+		dataType: boolean
+		lineageTag: 68b6d0cb-c8dc-5374-81e9-8689f14d5fb2
+		summarizeBy: none
+		sourceColumn: has_measured_value
+
+	column counterfeit
+		dataType: string
+		lineageTag: 3bb59d86-be51-5df8-9d48-e0f2982b9b0b
+		summarizeBy: none
+		sourceColumn: counterfeit
+
+	column alert_number_year
+		dataType: int64
+		formatString: 0
+		lineageTag: c610b1e9-62d5-5c89-ac0c-92dc634c39b4
+		summarizeBy: none
+		sourceColumn: alert_number_year
+
+	partition Alerts = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "alerts.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"alert_number", type text}, {"case_url", type text}, {"alert_level", type text}, {"user_type", type text}, {"notifying_country", type text}, {"origin_country", type text}, {"origin_region", type text}, {"product_type", type text}, {"product_group", type text}, {"product_name", type text}, {"brand", type text}, {"risk_type", type text}, {"primary_substance", type text}, {"weekly_report", type text}, {"weekly_report_date", type date}, {"publication_date", type date}, {"first_measure_date", type date}, {"days_measure_to_report", Int64.Type}, {"based_on_ingredient_list", type logical}, {"has_measured_value", type logical}, {"counterfeit", type text}, {"alert_number_year", Int64.Type}}, "en-US")
+				in
+				    Typed
